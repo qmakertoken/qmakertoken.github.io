@@ -1,0 +1,369 @@
+<!--
+
+//// https://github.com/qmakertoken
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Q-Maker">
+        <meta name="author" content="Q-Maker Team">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:site-name" content="" />
+        <meta property="og:description" content="..." />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('icons/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('icons/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('icons/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('icons/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('icons/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('icons/apple-icon-120x120.png.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('icons/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('icons/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('icons/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('icons/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('icons/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icons/favicon-16x16.png') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Quadrillion Maker</title>
+
+        <!-- Jquery CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Google font : Roboto -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+        <!-- Main style -->
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/state.css">
+
+        <!-- Smooth show effect -->
+        <script>
+            $(document).ready(function(){
+                const ratio = .1
+                const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: ratio
+                }
+                const handleIntersect = function (entries, observer){
+                entries.forEach(function (entry){
+                    if (entry.intersectionRatio > ratio){
+                    entry.target.classList.add('reveal-visible')
+                    observer.unobserve(entry.target)
+                    }
+                })
+                }
+                const observer = new IntersectionObserver(handleIntersect, options)
+                document.querySelectorAll('[class*="reveal-"]').forEach(function (r) {
+                    observer.observe(r)
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Main Header -->
+        <header class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#home" class="logo"><span class="color">Q</span>-Maker</a>
+                    </div>
+                    <div class="col-6 text-right">
+                        <span id="btnMenu" class="btn btn-secondary">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Menu -->
+        <div class="main-menu">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#team">Tokenomic</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#roadmap">Roadmap</a></li>
+                    </ul>
+                </nav>
+            </div>y
+        </div>
+
+        <!-- Main Wrapper -->
+        <div class="main-wrapper">
+
+            <!-- Main Banner -->
+            <section id="home" class="main-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-8 reveal-2">
+                            <h1>Welcome to Quadrillion Maker</h1>
+                            <p>A Frictionless Yield Generating Hyperdeflationary DeFi Token</br> Built to Give You Financial Freedom.</p>
+                            <a class="btn btn-md btn-primary" href="#">Buy Now<i class="fab fa-github"></i></a>
+                            <a class="btn btn-md btn-primary" href="#">Chart<i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-3">
+                            <img class="img-fluid" src="img/blockchain.png" alt="/">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section id="about" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <hr>
+                            <h2 class="page-title">About Us</h2>
+                        </div>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p><strong>What’s a Quadrillionaire Maker?</strong> First of all, a KING of all Maker known for its Fame, Glamour, and Luxury. These combined attributes make up a $Quadrillion Token holder- the richest when trading, and caring for other people and community. </p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2">
+                            <p>$QUAD is a community-driven token on the Binance Smart Chain. We created $QUAD to provide our holders with leading tokenomics within the DeFi space. Our frictionless generation protocol makes you earn passive income without having to do anything at all. 5% of every transaction automatically goes to holders, 5% goes to marketing.
+                            Static Rewards are a new and innovative solution to many issues. Firstly, rewards are directly correlated to the amount of trading volume at any given time. This type of system allows for a better, fairer, and more all-around balanced experience for holders.</p>   
+                        </article>
+
+
+            <!-- Features section -->
+            <section id="features" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <hr>
+                            <h2 class="page-title">Our features</h2>
+                        </div>
+                        <article class="col-12 col-md-6 reveal-2"><p><strong><h2>Verified Smart Contract</p></strong></h2>
+                            <p>We Publish our Smart Contract source code, which means you can observe, and review the actual code in our contract. This gives buyers confidence, that they are buying into something legitimate, and genuine. You can review contract logic, parameters, etc.</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2"><p><strong><h2>Massive Marketing Plans will be in place</p></strong></h2>
+                            <p>5% of every transaction is allocated to Marketing in BNB (swapped to BNB in real time to avoid dumps). Therefore, we can promote the most ambitious projects, and reward our active communities. We will also have both Pre, and Post Marketing plans.</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2"><p><strong><h2>Max Wallet to Protect from Whales & Dumpers</p></strong></h2>
+                            <p>We want to protect our holders from Whales, who snipe early, and then sell high ruining the experience for everyone else. We have employed a 4% Max Wallet, with 2% Max transaction which will prevent huge transactions at any one time.</p>   
+                        </article>
+                        <article class="col-12 col-md-6 reveal-2"><p><strong><h2>3% Auto Dividend Rewards To $QUAD Holder
+                            </p></strong></h2>
+                            <p>The longer you hold $QUAD tokens, the more you earn in rewards! Simply buy & hold $QUAD and you’ll get $XRP airdropped to your wallet every 1 hours automatically.</p>   
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team section -->
+            <section id="team" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Token Info</p>
+                            <h2 class="page-title">Tokenomic</h2>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <article class="card">
+                                <h3>Fees</h3>
+                                <p>Fees 10% tax, used to purchase Rewards which is automatically paid out in dividends to holders automatically.</p> 
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-3">
+                            <article class="card">                                
+                                <h3>Total Supply</h3>
+                                <p>1.000.000 $QUAD</p>    
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-4">
+                            <article class="card">
+                                <h3>Total Accumulation</h3>
+                                <p>85% Liquidity</p>  
+                                <p>5% Marketing Wallet</p> 
+                                <p>10% Tax Fee</p>              
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partners section -->
+            <section id="partners" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Our Partners</p>
+                            <h2 class="page-title">Partners Listing</h2>
+                        </div>
+                        <article class="col-12 reveal-2">
+                            <div class="partners-slider">
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/1.png" alt="Partner 1">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/2.png" alt="Partner 2">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/3.png" alt="Partner 3">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/4.png" alt="Partner 4">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/1.png" alt="Partner 1">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/2.png" alt="Partner 2">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/3.png" alt="Partner 3">
+                                </div>
+                                <div class="partners-slider-item">
+                                    <img class="img-fluid" src="img/partners/4.png" alt="Partner 4">
+                                </div>
+                              </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            
+            <!-- Roadmap section -->
+            <section id="roadmap" class="page-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 reveal-2">
+                            <p class="page-subtitle">Our future developement</p>
+                            <h2 class="page-title">Roadmap</h2>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <h3>2021 - Q2</h3>
+                            <article class="card">
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Telegram Community is created.</li>
+                                    <li><i class="fas fa-check"></i> Website Launch.</li>
+                                    <li><i class="fas fa-check"></i> Primary Social Media created.</li>
+                                    <li><i class="fas fa-check"></i> Contract creation and verification.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Fair Launch.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Push Marketing Promotions.</li>
+                                </ul>                        
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <h3>2021 - Q3</h3>
+                            <article class="card">
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i> Marketing Campaigns by influencers and crypto industry.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Apply CoinGecko & CoinMarketCap.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Youtube videos promotion.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Contract Audit.</li>
+                                    <li><i class="fas fa-chevron-right"></i> development of NFTs.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Reach 500 holders.</li>
+                                </ul>                       
+                            </article>
+                        </div>
+                        <div class="col-12 col-md-4 reveal-2">
+                            <h3>2021 - Q4</h3>
+                            <article class="card"> 
+                                <ul>
+                                    <li><i class="fas fa-chevron-right"></i> Launch Exclusive NFTs.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Release dApp.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Listing on Top exchanges.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Build NFTs Marketplace.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Giveaway for Community.</li>
+                                    <li><i class="fas fa-chevron-right"></i> Testnet dApp.</li>
+                                </ul>                       
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="container">
+                    <div class="row">
+                        <article class="col-12 col-md-3">
+                            <h2><strong>Social Media</h2></strong>
+                            <ul>
+                                <li><a href="https://t.me/Uraquadrillionaire">Telegram</a></li>
+                                <li><a href="https://www.twitter.com/qmakertoken">Twitter</a></li>
+                                <li><a href="#">Whitepapper</a></li>
+                            </ul>
+                        </article>
+
+                        <div class="col-12">
+                            <hr>   
+                        </div>
+                        <div class="col-12 col-md-6 copyright">
+                            <p>&copy; 2021 Q-Maker by <a target="_blank" href="#home">Q-Maker</a> & <a target="_blank" href="#">Quadrillion Maker</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- PopperJS & Bootstrap CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- Slick -->
+        <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+        <script>
+            $('.partners-slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 2
+                    }
+                  }
+                ]
+            });
+        </script>
+        <!-- -->
+        <script src="js/app.js"></script>
+    </body>
+</html>
